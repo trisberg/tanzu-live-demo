@@ -1,0 +1,24 @@
+#@ load("@ytt:data", "data")
+---
+apiVersion: kpack.io/v1alpha1
+kind: ClusterBuilder
+metadata:
+  name: base
+spec:
+  serviceAccountRef:
+    name: build-service-account
+    namespace: default
+  tag: #@ data.values.repositoryPrefix + "/base-builder"
+  stack:
+    name: demo
+    kind: ClusterStack
+  store:
+    name: demo
+    kind: ClusterStore
+  order:
+    - group:
+        - id: paketo-buildpacks/java
+    - group:
+        - id: paketo-buildpacks/nodejs
+    - group:
+        - id: paketo-buildpacks/go

@@ -1,0 +1,19 @@
+accelerator:
+  displayName: Kontinue Demo
+  description: Demo supply-chain for Kontinue
+  iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
+  tags: 
+  - kontinue
+  - kpack
+  - supply-chain
+  options:
+  - name: repositoryPrefix
+    label: Repository Prefix
+    description: The prefix to use for any image repository references
+    defaultValue: index.docker.io/sample
+    required: true
+engine:
+  merge:
+  - type: YTT
+  - include:
+    - README.md
