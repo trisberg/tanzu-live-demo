@@ -1,9 +1,9 @@
 accelerator:
-  displayName: Kontinue Demo
-  description: Demo supply-chain for Kontinue
+  displayName: Workload Demo
+  description: Demo supply-chain for Cartographer workload
   iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
   tags: 
-  - kontinue
+  - cartographer
   - kpack
   - supply-chain
   options:

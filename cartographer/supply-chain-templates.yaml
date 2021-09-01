@@ -1,6 +1,6 @@
 #@ load("@ytt:data", "data")
 ---
-apiVersion: kontinue.io/v1alpha1
+apiVersion: carto.run/v1alpha1
 kind: ClusterSourceTemplate
 metadata:
   name: source
@@ -19,7 +19,7 @@ spec:
       ref: $(workload.spec.source.git.ref)$
       ignore: ""
 ---
-apiVersion: kontinue.io/v1alpha1
+apiVersion: carto.run/v1alpha1
 kind: ClusterImageTemplate
 metadata:
   name: image
@@ -45,7 +45,7 @@ spec:
         blob:
           url: $(sources[0].url)$
 ---
-apiVersion: kontinue.io/v1alpha1
+apiVersion: carto.run/v1alpha1
 kind: ClusterTemplate
 metadata:
   name: kn-app
